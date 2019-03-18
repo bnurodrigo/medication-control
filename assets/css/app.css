@@ -1,0 +1,14 @@
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+form {
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.invalid-feedback,
+.valid-feedback {
+    display: block;
+}

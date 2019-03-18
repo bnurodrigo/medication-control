@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medication Control</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/config/routeConfig.js"></script>
+    <script src="app/config/interceptorsConfig.js"></script>
+    <script src="app/services/medicationService.js"></script>
+    <script src="app/constants/measurementUnit.js"></script>
+    <script src="app/constants/environment.js"></script>
+    <script src="app/controllers/medicationListController.js"></script>
+    <script src="app/controllers/medicationCreateController.js"></script>
+    <script src="app/interceptors/loadingInterceptor.js"></script>
+</head>
+
+<body ng-app="medicationControl" ng-cloak>
+    <nav class="navbar navbar-dark bg-dark mb-30">
+        <div class="container">
+            <div class="col">
+                <a href="#!/">
+                    <span class="navbar-brand mb-0 h1">Medication Control</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="main-loader text-center" ng-show="loading"><img src="assets/img/spinner.gif" width="70px" height="70px" /></div>
+                <div ng-view ng-hide="loading"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
