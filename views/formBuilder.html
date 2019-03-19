@@ -1,0 +1,45 @@
+<form name="dataForm">
+    <div class="form-group" ng-repeat="field in options.fields track by field.name">
+        <label for="data-form-{{field.name}}" ng-show="field.label">{{field.label}}</label>
+
+        <input 
+            type="{{field.type}}" 
+            id="data-form-{{field.name}}"
+            class="form-control"
+            name="{{field.name}}"
+            ng-class="{'is-invalid': dataForm[field.name].$dirty && dataForm[field.name].$invalid, 'is-valid': dataForm[field.name].$dirty && dataForm[field.name].$valid}"
+            ng-model="data[field.name]"
+            ng-if="field.type === 'text' || field.type === 'number'"
+            ng-required="validation(field, 'required')"
+            ng-min="validation(field, 'min')"
+        />
+
+        <select
+            id="data-form-{{field.name}}"
+            class="custom-select"
+            name="{{field.name}}"
+            ng-class="{'is-invalid': dataForm[field.name].$dirty && dataForm[field.name].$invalid, 'is-valid': dataForm[field.name].$dirty && dataForm[field.name].$valid}"
+            ng-model="data[field.name]"
+            ng-if="field.type === 'choice'"
+            ng-required="validation(field, 'required')"
+            ng-options="choice for choice in field.choices track by choice"
+        >
+            <option value=""></option>
+        </select>
+
+        <div ng-show="dataForm[field.name].$dirty">
+            <div class="valid-feedback" ng-show="dataForm[field.name].$valid">
+                Ok!
+            </div>
+            <div class="invalid-feedback" ng-repeat="(type, validation) in field.validations track by $index" ng-show="dataForm[field.name].$error[type]">
+                {{validation.message}}
+            </div>
+        </div>
+        <br>
+    </div>
+    
+    <button class="btn btn-block" ng-class="{'btn-success': !data.id, 'btn-primary': data.id}" ng-disabled="dataForm.$invalid" ng-click="onSubmit(data)">
+        <em class="fas" ng-class="{'fa-plus': !data.id, 'fa-edit': data.id}"></em>
+        <span>{{data.id ? 'Edit' : 'Create'}}</span>
+    </button>
+</form>

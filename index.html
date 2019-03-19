@@ -5,8 +5,10 @@
     <title>Medication Control</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/app.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
@@ -15,12 +17,14 @@
     <script src="app/app.js"></script>
     <script src="app/config/routeConfig.js"></script>
     <script src="app/config/interceptorsConfig.js"></script>
+    <script src="app/interceptors/loadingInterceptor.js"></script>
     <script src="app/services/medicationService.js"></script>
     <script src="app/constants/measurementUnit.js"></script>
     <script src="app/constants/environment.js"></script>
     <script src="app/controllers/medicationListController.js"></script>
-    <script src="app/controllers/medicationCreateController.js"></script>
-    <script src="app/interceptors/loadingInterceptor.js"></script>
+    <script src="app/controllers/medicationFormController.js"></script>
+    <script src="app/directives/gridDirective.js"></script>
+    <script src="app/directives/formBuilderDirective.js"></script>
 </head>
 
 <body ng-app="medicationControl" ng-cloak>
@@ -31,14 +35,18 @@
                     <span class="navbar-brand mb-0 h1">Medication Control</span>
                 </a>
             </div>
+            <div class="col">
+                <div class="main-loader text-right" ng-show="loading">
+                    <img src="assets/img/spinner.gif" alt="" width="40px" height="40px" />
+                </div>
+            </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="row">
             <div class="col">
-                <div class="main-loader text-center" ng-show="loading"><img src="assets/img/spinner.gif" width="70px" height="70px" /></div>
-                <div ng-view ng-hide="loading"></div>
+                <div ng-view></div>
             </div>
         </div>
     </div>

@@ -1,3 +1,25 @@
 {
-    "medications": []
+  "medications": [
+    {
+      "name": "fas",
+      "measurementUnit": "BAU/mL",
+      "orientation": "fas",
+      "stock": 213,
+      "id": 8
+    },
+    {
+      "name": "fasfasfas",
+      "measurementUnit": "BAU",
+      "orientation": "fsafas",
+      "stock": 22,
+      "id": 10
+    },
+    {
+      "name": "fasf",
+      "measurementUnit": "BU",
+      "orientation": "dsa",
+      "stock": 42,
+      "id": 11
+    }
+  ]
 }

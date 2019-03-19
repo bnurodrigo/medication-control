@@ -12,3 +12,6 @@ Install JSON Server
 
 Install project dependencies
 ```npm i```
+
+Run backend server
+```json-server --watch db.json```

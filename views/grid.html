@@ -1,0 +1,34 @@
+<div>
+    <div ng-if="!options.data.length">
+        <div class="alert alert-primary" role="alert">No records found.</div>
+    </div>
+    <table class="table" ng-if="options.data.length">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col" ng-repeat="column in options.columns">{{column.label}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="data in options.data track by data.id">
+                <th scope="row">{{data.id}}</th>
+                <td ng-repeat="column in options.columns">
+
+                    <div class="d-inline" ng-if="column.type === 'button'">
+                        <a class="btn btn-{{button.style}}"
+                            href="{{button.path ? button.path.replace(':id', data.id) : 'javascript:void(0)'}}"
+                            ng-click="button.events.click(data, options.data)" ng-repeat="button in column.buttons">
+                            <em class="fas fa-{{button.icon}}" ng-if="button.icon"></em>
+                            <span ng-if="button.text">{{button.text}}</span>
+                        </a>
+                    </div>
+
+                    <div class="d-inline" ng-if="column.type === 'default'">
+                        {{data[column.value]}}
+                    </div>
+
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

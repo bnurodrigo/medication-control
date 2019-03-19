@@ -1,24 +1,8 @@
 <div class="text-right mb-30">
-    <a class="btn btn-primary" href="#!/create">Create Medication</a>
+    <a class="btn btn-success" href="#!/create">
+        <em class="fas fa-plus-circle"></em>
+        <span>Create Medication</span>
+    </a>
 </div>
-<div ng-if="!medications.length">
-    <div class="alert alert-primary" role="alert">No records found.</div>
-</div>
-<table class="table" ng-if="medications.length">
-    <thead>
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Measurement Unit</th>
-            <th scope="col">Orientation</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="medication in medications track by medication.id">
-            <th scope="row">{{medication.id}}</th>
-            <td>{{medication.name}}</td>
-            <td>{{medication.measurementUnit}}</td>
-            <td>{{medication.orientation}}</td>
-        </tr>
-    </tbody>
-</table>
+
+<grid options="gridOptions"></grid>
