@@ -1,25 +1,60 @@
 {
   "medications": [
     {
-      "name": "fas",
-      "measurementUnit": "BAU/mL",
-      "orientation": "fas",
-      "stock": 213,
-      "id": 8
+      "name": "Acetaminophen",
+      "measurementUnit": "strip",
+      "orientation": "Acetaminophen is a pain reliever and a fever reducer.",
+      "stock": 10,
+      "id": 1
     },
     {
-      "name": "fasfasfas",
-      "measurementUnit": "BAU",
-      "orientation": "fsafas",
-      "stock": 22,
-      "id": 10
-    },
-    {
-      "name": "fasf",
-      "measurementUnit": "BU",
-      "orientation": "dsa",
+      "name": "Ciprofloxacin",
+      "measurementUnit": "uCi",
+      "orientation": "Ciprofloxacin can cause serious side effects, including tendon problems, nerve damage, serious mood or behavior changes, or low blood sugar.",
       "stock": 42,
-      "id": 11
+      "id": 2
+    },
+    {
+      "name": "Xanax",
+      "measurementUnit": "AU/mL",
+      "orientation": "Xanax (alprazolam) is a benzodiazepine (ben-zoe-dye-AZE-eh-peen). Alprazolam affects chemicals in the brain that may be unbalanced in people with anxiety.",
+      "stock": 22,
+      "id": 3
+    },
+    {
+      "name": "Hydrochlorothiazide",
+      "measurementUnit": "BAU/mL",
+      "stock": 2,
+      "orientation": "Hydrochlorothiazide is a thiazide diuretic (water pill) that helps prevent your body from absorbing too much salt, which can cause fluid retention.",
+      "id": 4
+    },
+    {
+      "name": "Doxycycline",
+      "measurementUnit": "cm^2",
+      "orientation": "Doxycycline is a tetracycline antibiotic that fights bacteria in the body.",
+      "stock": 120,
+      "id": 5
+    },
+    {
+      "name": "Prednisone",
+      "measurementUnit": "tsp",
+      "orientation": "Prednisone is a corticosteroid. It prevents the release of substances in the body that cause inflammation. It also suppresses the immune system.",
+      "stock": 244,
+      "id": 6
+    },
+    {
+      "name": "Gabapentin",
+      "measurementUnit": "umol",
+      "orientation": "Zoloft (sertraline) is an antidepressant belonging to a group of drugs called selective serotonin reuptake inhibitors (SSRIs). Sertraline affects chemicals in the brain that may be unbalanced in people with depression, panic, anxiety, or obsessive-compulsive symptoms.",
+      "stock": 0,
+      "id": 7
+    },
+    {
+      "name": "Lyrica",
+      "orientation": "Lyrica (pregabalin) was originally FDA approved as an anti-epileptic drug, also called an anticonvulsant. It works by slowing down impulses in the brain that cause seizures. Pregabalin also affects chemicals in the brain that send pain signals across the nervous system.",
+      "measurementUnit": "mCi/mL",
+      "stock": 14,
+      "id": 8
     }
   ]
 }

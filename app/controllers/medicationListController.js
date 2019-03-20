@@ -15,7 +15,9 @@ angular.module('medicationControl').controller('medicationListController', funct
             {
                 type: 'default',
                 label: 'Orientation',
-                value: 'orientation'
+                value: 'orientation',
+                data: 'See orientation',
+                tooltip: true
             },
             {
                 type: 'button',

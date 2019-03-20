@@ -23,8 +23,9 @@
                         </a>
                     </div>
 
-                    <div class="d-inline" ng-if="column.type === 'default'">
-                        {{data[column.value]}}
+                    <div class="d-inline" ng-if="column.type === 'default'"
+                        title="{{column.tooltip ? data[column.value] : null}}" tooltip>
+                        {{column.data || data[column.value]}}
                     </div>
 
                 </td>
