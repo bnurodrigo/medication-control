@@ -14,18 +14,15 @@
             ng-min="validation(field, 'min')"
         />
 
-        <select
+        <form-select 
             id="data-form-{{field.name}}"
-            class="custom-select"
             name="{{field.name}}"
-            ng-class="{'is-invalid': dataForm[field.name].$dirty && dataForm[field.name].$invalid, 'is-valid': dataForm[field.name].$dirty && dataForm[field.name].$valid}"
-            ng-model="data[field.name]"
+            options="field.choices" 
             ng-if="field.type === 'choice'"
             ng-required="validation(field, 'required')"
-            ng-options="choice for choice in field.choices track by choice"
-        >
-            <option value=""></option>
-        </select>
+            ng-model="data[field.name]"
+            ng-class="{'is-invalid': dataForm[field.name].$dirty && dataForm[field.name].$invalid, 'is-valid': dataForm[field.name].$dirty && dataForm[field.name].$valid}">
+        </form-select>
 
         <div ng-show="dataForm[field.name].$dirty">
             <div class="valid-feedback" ng-show="dataForm[field.name].$valid">

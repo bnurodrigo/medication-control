@@ -4,7 +4,7 @@
       "name": "Acetaminophen",
       "measurementUnit": "strip",
       "orientation": "Acetaminophen is a pain reliever and a fever reducer.",
-      "stock": 10,
+      "stock": 12,
       "id": 1
     },
     {
@@ -24,7 +24,7 @@
     {
       "name": "Hydrochlorothiazide",
       "measurementUnit": "BAU/mL",
-      "stock": 2,
+      "stock": 4,
       "orientation": "Hydrochlorothiazide is a thiazide diuretic (water pill) that helps prevent your body from absorbing too much salt, which can cause fluid retention.",
       "id": 4
     },
